@@ -1,0 +1,2 @@
+# Lexoffice
+Lexoffice OpenAPI Swagger
