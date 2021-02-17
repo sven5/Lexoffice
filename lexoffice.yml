@@ -1,0 +1,31 @@
+swagger: '2.0'
+info: {title: lexoffice API, description: 'lexoffice API https://developers.lexoffice.io/',
+  version: '1.0'}
+host: api.lexoffice.io
+basePath: /v1/
+schemes: [https]
+consumes: []
+produces: []
+paths:
+  /files:
+    post:
+      responses:
+        default: {description: default}
+      summary: Upload a file
+      operationId: FileUpload
+      description: https://developers.lexoffice.io/docs/#files-endpoint-upload-a-file
+      consumes: [multipart/form-data]
+      produces: [application/json]
+      parameters:
+      - {name: type, type: string, default: voucher, description: document type, required: true,
+        in: formData}
+      - {name: file, in: formData, required: true, type: file, x-ms-summary: File
+          Content}
+definitions: {}
+parameters: {}
+responses: {}
+securityDefinitions:
+  API-Schlüssel: {type: apiKey, in: header, name: Authorization}
+tags: []
+security:
+- API-Schlüssel: []
